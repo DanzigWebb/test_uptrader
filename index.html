@@ -10,72 +10,133 @@
 
 	<link rel="icon" href="img/favicon/favicon.ico">
 	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
-	<link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
 
 	<meta name="theme-color" content="#000">
-	<link rel="stylesheet" href="libs/swiper/swiper.min.css">
 	<link rel="stylesheet" href="styles/css/main.css">
-
+	<link rel="stylesheet" href="fonts/stylesheet.css">
 
 </head>
 
 <body>
-	<header class="header">
-		<div class="header__logo"><span>M</span></div>
-	</header>
-	<div class="f-screen">
-		
-		<div class="f-screen__item f-screen__item--cart">
-			<img src="img/cart.png" alt="">
+	<section class="main">
+		<div class="container main_content">
+			<div class="main__heading">
+				<h1>Выберите способ заработка</h1>
+			</div>
+			<nav class="main-menu">
+				<span class="main-menu__btn">
+					<div class="main-menu__icon-wrap">
+						<img src="img/icon1.svg" alt="">
+					</div>
+					<span>Торговать</span>
+				</span>
+				<span class="main-menu__btn">
+					<div class="main-menu__icon-wrap">
+						<img src="img/icon2.svg" alt="">
+					</div>
+					<span>Инвестировать</span>
+				</span>
+				<span class="main-menu__btn">
+					<div class="main-menu__icon-wrap">
+						<img src="img/icon3.svg" alt="">
+					</div>
+					<span>Привлекать инвесторов</span>
+				</span>
+			</nav>
 		</div>
-		<div class="f-screen__item f-screen__item--mac">
-			<img src="img/macbook.png" alt="">
-		</div>
-		<div class="f-screen__item f-screen__item--screen">
-			<img src="img/screen.png" alt="">
-		</div>
-		<div class="f-screen__item f-screen__item--closenote">
-			<img src="img/close_note.png" alt="">
-		</div>
-		<div class="f-screen__item f-screen__item--ipad">
-			<img src="img/ipad.png" alt="">
-		</div>
-		<div class="f-screen__item f-screen__item--cart-b">
-			<img src="img/cart-b.png" alt="">
-		</div>
-		<div class="f-screen__item f-screen__item--cart-bot">
-			<img src="img/cart-bot.png" alt="">
-		</div>
-	</div>
+	</section>
+	<section class="about" id="tabs">
+			<div class="main__heading main__heading--mob">
+					<h1>Выберите способ<br> заработка</h1>
+				</div>
+		<div class="tabs">
+			<div class="container">
+				<ul class="tabs__list">
+					<li class="tabs__item">
+						<div class="tabs__item-list">
+							<div class="main-menu__icon-wrap">
+								<img src="img/icon1.svg" alt="">
+							</div>
+							Торговать
+						</div>
 
-	<script src="libs/swiper/swiper.min.js"></script>
+						<div class="tabs-content">
+							<p class="tabs-content__description">Если вы ищете пассивный доход и предпочитаете, чтобы деньги для вас
+								зарабатывал тот, кто умеет это делать,
+								тогда попробуйте ЛАММ. ЛАММ – это сервис копирования сделок успешных трейдеров. Доходность ни чем не
+								ограничена!</p>
+							<h4>Как это работает</h4>
+							<ul class="tabs-content__list">
+								<li class="tabs-content__item">Вы выбираете управляющего из рейтинга по фильтру Options</li>
+								<li class="tabs-content__item">Подключаете свой счет к счету Управляющего</li>
+								<li class="tabs-content__item">На вашем счете начинается копирование сделок</li>
+								<li class="tabs-content__item">Обратите внимание, что вы не перечисляете свои деньги Управляющему. Все
+									ваши
+									средства остаются на Вашем счете.</li>
+								<li class="tabs-content__item">Вы можете подключиться к нескольким Управляющим одновременно.</li>
+								<li class="tabs-content__item">Вы можете отключиться от Управляющих в любой момент.</li>
+							</ul>
+							<a href="#/" class="btn">Продолжить</a>
+						</div>
+					</li>
+					<li class="tabs__item">
+						<div class="tabs__item-list">
+							<div class="main-menu__icon-wrap">
+								<img src="img/icon2.svg" alt="">
+							</div>
+							Инвестировать
+						</div>
+						<div class="tabs-content">
+							<p class="tabs-content__description">Если вы ищете пассивный доход и предпочитаете, чтобы деньги для вас
+								зарабатывал тот, кто умеет это делать,
+								тогда попробуйте ЛАММ. ЛАММ – это сервис копирования сделок успешных трейдеров. Доходность ни чем не
+								ограничена!</p>
+							<h4>Как это работает</h4>
+							<ul class="tabs-content__list">
+								<li class="tabs-content__item">Вы выбираете управляющего из рейтинга по фильтру Options</li>
+								<li class="tabs-content__item">Подключаете свой счет к счету Управляющего</li>
+								<li class="tabs-content__item">На вашем счете начинается копирование сделок</li>
+								<li class="tabs-content__item">Обратите внимание, что вы не перечисляете свои деньги Управляющему. Все
+									ваши
+									средства остаются на Вашем счете.</li>
+								<li class="tabs-content__item">Вы можете подключиться к нескольким Управляющим одновременно.</li>
+								<li class="tabs-content__item">Вы можете отключиться от Управляющих в любой момент.</li>
+							</ul>
+							<a href="#/" class="btn">Продолжить</a>
+						</div>
+					</li>
+					<li class="tabs__item">
+						<div class="tabs__item-list">
+							<div class="main-menu__icon-wrap">
+								<img src="img/icon3.svg" alt="">
+							</div>
+							Привлекать инвесторов
+						</div>
+						<div class="tabs-content">
+							<p class="tabs-content__description">Если вы ищете пассивный доход и предпочитаете, чтобы деньги для вас
+								зарабатывал тот, кто умеет это делать,
+								тогда попробуйте ЛАММ. ЛАММ – это сервис копирования сделок успешных трейдеров. Доходность ни чем не
+								ограничена!</p>
+							<h4>Как это работает</h4>
+							<ul class="tabs-content__list">
+								<li class="tabs-content__item">Вы выбираете управляющего из рейтинга по фильтру Options</li>
+								<li class="tabs-content__item">Подключаете свой счет к счету Управляющего</li>
+								<li class="tabs-content__item">На вашем счете начинается копирование сделок</li>
+								<li class="tabs-content__item">Обратите внимание, что вы не перечисляете свои деньги Управляющему. Все
+									ваши
+									средства остаются на Вашем счете.</li>
+								<li class="tabs-content__item">Вы можете подключиться к нескольким Управляющим одновременно.</li>
+								<li class="tabs-content__item">Вы можете отключиться от Управляющих в любой момент.</li>
+							</ul>
+							<a href="#/" class="btn">Продолжить</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+
 	<script src="js/common.js"></script>
-
-	<script>
-		var linkNav = document.querySelectorAll('[href^="#"]'),
-			V = .2;
-		for (var i = 0; i < linkNav.length; i++) {
-			linkNav[i].addEventListener('click', function (e) {
-				e.preventDefault();
-				var w = window.pageYOffset,
-					hash = this.href.replace(/[^#]*(.*)/, '$1');
-				t = document.querySelector(hash).getBoundingClientRect().top,
-					start = null;
-				requestAnimationFrame(step);
-				function step(time) {
-					if (start === null) start = time;
-					var progress = time - start,
-						r = (t < 0 ? Math.max(w - progress / V, w + t) : Math.min(w + progress / V, w + t));
-					window.scrollTo(0, r);
-					if (r != w + t) {
-						requestAnimationFrame(step)
-					} else {
-						location.hash = hash
-					}
-				}
-			}, false);
-		}
-	</script>
 </body>
 
 </html>

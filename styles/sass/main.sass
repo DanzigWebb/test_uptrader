@@ -1,91 +1,313 @@
 @import "vars"
 @import "most"
-@import "offer"
-@import "anim"
 
 // ======================================>
-// header
+// main
 // <======================================
-.header
-  position: absolute
-  top: 0
+.container
+  max-width: 12rem
+  padding-left: 0.15rem
+  padding-right: 0.15rem
   width: 100%
-  left: 0
-  height: 0.5rem
+  margin: auto
+  box-sizing: border-box
+.main
+  background-image: url(../../img/main_bg.png)
+  background-size: cover
+  height: 100vh
+  // min-height: 9.6rem
   display: flex
   align-items: center
-  padding-left: 0.5rem
-  box-sizing: border-box
-.f-screen
-  max-width: 1600px
-  margin: auto
-  padding: .15rem
-  min-height: 100vh
+  justify-content: center
+  flex-direction: column
+  z-index: 2
   position: relative
+  transition: .4s ease
+.main__heading
+  h1
+    text-align: center
+    font-size: 0.48rem
+    font-weight: normal
+    margin-bottom: 0.8rem
+.main-menu
+  width: 100%
+  margin: auto
+  display: flex
+  justify-content: space-between
+  align-items: center
+.main-menu__btn
+  width: 3.64rem
+  height: 3.64rem
+  border-radius: 50%
+  display: flex
+  align-items: center
+  flex-direction: column
+  justify-content: center
+  background-color: rgba(255, 255, 255, .6)
+  position: relative
+  color: #242424
+  font-size: 0.28rem
+  text-decoration: none
+  text-align: center
+  &:before
+    content: ''
+    position: absolute
+    top: .06rem
+    left: .06rem
+    bottom: .06rem
+    right: .06rem
+    box-sizing: border-box
+    border-radius: 50%
+    border: 1px solid transparent
+    transition: $anim
+  &:hover:before
+    border: 1px solid $accent
 
-.f-screen__item
+.main-menu__icon-wrap
+  height: 0.7rem
+  margin-bottom: 0.4rem
+  display: flex
+  align-items: center
+  justify-content: center
+
+// ======================================>
+// about
+// <======================================
+
+.about
+  background-image: url(../../img/tabs_bg.png)
+  background-size: cover
+  min-height: 100vh
   position: absolute
-  opacity: 0
-  animation: show .4s forwards
-  img
-    width: 100%
-.f-screen__item--cart
-  max-width: 808px
-  width: 42vw
-  top: 7vw
-  @media (min-width: 1920px)
-    top: 134.4px
-
-.f-screen__item--mac
-  max-width: 1050px
-  width: 55vw
-  left: 10vw
   top: 0
-.f-screen__item--screen
-  max-width: 388px
-  width: 20vw
-  top: 1vw
-  left: 35vw
-  @media (min-width: 1920px)
-    left: 672px
-    top: 20px
-.f-screen__item--closenote
-  left: 47vw
-  top: 3vw
-  width: 37.3vw
-  @media (min-width: 1920px)
-    left: 902.4px
-    top: 57.6px
-    width: 717px
-.f-screen__item--ipad
-  width: 26vw
-  max-width: 500px
-  top: 30vw
-  left: 10vw
-  @media (min-width: 1920px)
-    top: 576px
-    left: 192px
-.f-screen__item--cart-b
-  width: 45vw
-  max-width: 870px
-  top: 25vw
-  left: 43vw
-  @media (min-width: 1920px)
-    top: 480px
-    left: 825.6px
-.f-screen__item--cart-bot
-  width: 45vw
-  max-width: 870px
-  top: 36vw
-  left: 10vw
-  @media (min-width: 1920px)
-    top: 691px
-    left: 192px
+  left: 0
+  width: 100%
+  height: auto
+  display: none
+  animation: show .3s forwards
+  // animation-delay: .2s
+  z-index: 3
+.tabs
+  border-bottom: 1px solid #b5b5b5
+  animation: tabsShow .3s forwards
+  position: relative
+.tabs__list
+  width: 100%
+  margin: 0
+  padding: 0
+  display: flex
+  justify-content: space-around
+  align-items: center
+  list-style: none
+  height: 1.14rem
+  position: relative
+.tabs__item
+  color: #2e2e2e
+  font-size: 0.28rem
+  width: 33.3333%
+  text-align: center
+  height: 100%
+  display: flex
+  align-items: center
+  justify-content: center
+  border-bottom: 3px solid transparent
+  cursor: pointer
+  transition: $anim
+  &.active
+    color: $accent
+    border-bottom: 3px solid $accent
+.tabs-content
+  position: absolute
+  left: 0
+  top: 1.2rem
+  margin-top: 0.8rem
+  max-width: 7.1rem
+  display: none
+  animation-delay: 1s
+  animation: show .5s forwards
+  padding-bottom: 0.4rem
+  text-align: left
+  &.active
+    display: block
+.tabs-content__description
+  font-size: 0.18rem
+  line-height: 0.24rem
+  color: #1c1c1c
+  
 
+.tabs-content__list
+  margin: 0
+  padding: 0
+  list-style: none
+  counter-reset: item
+  margin-bottom: 0.55rem
+.tabs-content__item
+  position: relative
+  margin-bottom: 0.2rem
+  padding-left: 0.3rem
+  font-size: 0.18rem
+  color: #333
+  &:before
+    counter-increment: item
+    content: counter(item)
+    font-size: 0.32rem
+    color: $accent
+    position: absolute
+    left: 0
+    top: 50%
+    transform: translateY(-50%)
+
+
+.main_content
+  transition: all 2s ease
+  &.active
+    transform: translateY(-100%)
+    opacity: 0
+.mobile-content
+  display: none
 @keyframes show
   from
     opacity: 0
-    transform: translateY(-5%)
+  to
+    opacity: 1
+@keyframes tabsShow
+  from
+    opacity: 0
+    transform: translateY(30px)
   to
     opacity: 1
     transform: translateY(0)
+
+
+@media (max-width: 1270px)
+  .main-menu__btn
+    width: 3rem
+    height: 3rem
+
+@media (max-width: 970px)
+  .main-menu__btn
+    width: 2.2rem
+    height: 2.2rem
+    font-size: 0.23rem
+  .main-menu__icon-wrap
+    margin-bottom: 0.2rem
+
+  .tabs__item
+    font-size: 0.20rem
+@media (max-width: 720px)
+  .main
+    min-height: 100vh
+    height: auto
+  .main-menu
+    flex-wrap: wrap
+    justify-content: center
+  .main-menu__btn
+    margin: .05rem
+    box-sizing: border-box
+  .about
+    height: 100%
+  .tabs__item
+    font-size: 0.16rem
+
+@media (max-width: 560px)
+  .main
+    justify-content: flex-start
+  .container
+    margin: 0 auto
+  .main__heading h1
+    font-size: 0.36rem
+    line-height: 0.42rem
+    margin-bottom: 0.25rem
+  .main-menu__btn
+    border-radius: 0
+    margin-bottom: 0.2rem
+    height: 0.7rem
+    width: 100%
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
+    font-size: 0.19rem
+    position: relative
+    &:before
+      border-radius: 0
+    &:after
+      content: ''
+      width: 0.2rem
+      height: 0.1rem
+      background-image: url(../../img/arrow.png)
+      background-repeat: no-repeat
+      background-size: contain
+      position: absolute
+      right: 0.2rem
+      top: 50%
+      transform: translateY(-50%)
+      transition: $anim
+    &:hover:after
+      transform: translateY(-50%) rotate(180deg)
+  .main-menu__icon-wrap
+    height: 0.45rem
+    margin-bottom: 0
+    margin: .2rem .3rem
+    width: 0.45rem
+    img
+      width: 0.36rem
+  .main-menu--content
+    display: block
+    padding: 0 .15rem
+    box-sizing: border-box
+  .about
+    background: #f3f2da
+    height: auto
+  .tabs
+    border: none
+  .tabs__list
+    display: block
+    height: auto
+  .tabs__item
+    width: 100%
+    display: block
+    &.active
+      border: none
+  .tabs-content
+    position: static
+    margin-top: 0.3rem
+  .tabs__item-list
+    border-radius: 0
+    margin-bottom: 0.2rem
+    height: 0.7rem
+    width: 100%
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
+    align-items: center
+    font-size: 0.19rem
+    position: relative
+    background-color: rgba(255, 255, 255, .6)
+    color: #242424
+    &:before
+      border-radius: 0
+    &:after
+      content: ''
+      width: 0.2rem
+      height: 0.1rem
+      background-image: url(../../img/arrow.png)
+      background-repeat: no-repeat
+      background-size: contain
+      position: absolute
+      right: 0.2rem
+      top: 50%
+      transform: translateY(-50%)
+      transition: $anim
+    &:hover:after
+      transform: translateY(-50%) rotate(180deg)
+
+@media (min-width: 561px)
+  .main__heading--mob
+    display: none
+  .about
+    .main-menu__icon-wrap
+      display: none
+// .main
+//   display: none
+// .about
+//   display: block
