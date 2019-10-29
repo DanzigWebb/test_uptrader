@@ -45,12 +45,19 @@
   })
 })();
 
+// ========================>
+// scroll to carousel btn in mobile version
+// <========================
 if (document.documentElement.clientWidth < 560) scrollToTab()
 
 function scrollToTab() {
   let btns = document.querySelectorAll('.tabs__item-list')
   btns.forEach(btn => {
-    console.log(btn)
+    btn.addEventListener('click', () => {
+      setTimeout(() => {
+        window.scrollBy(0, btn.getBoundingClientRect().top)
+      }, 400);
+    })
   })
 }
 

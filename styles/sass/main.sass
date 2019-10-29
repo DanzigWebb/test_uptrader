@@ -306,13 +306,21 @@
   .tabs__item.active
     .tabs__item-list:after
       transform: translateY(-50%) rotate(180deg)
-
+.img-wrap
+  display: flex
+  align-items: center
+  justify-content: center
+  img
+    width: 100%
 @media (min-width: 561px)
   .main__heading--mob
     display: none
   .about
     .main-menu__icon-wrap
       display: none
+  .img-wrap
+    display: none
+
 // .main
 //   display: none
 // .about
